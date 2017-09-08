@@ -6,6 +6,16 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.rygbee.APIs.ApiClient;
+import com.rygbee.APIs.ApiInterface;
+import com.rygbee.Response.Result;
+import com.rygbee.Response.User;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +49,25 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        getData();
+    }
+
+    private void getData() {
+        ApiInterface apiInterface= ApiClient.getClient().create(ApiInterface.class);
+        Call<Result> call=apiInterface.getDetails();
+        call.enqueue(new Callback<Result>() {
+            @Override
+            public void onResponse(Call<Result> call, Response<Result> response) {
+                User u = response.body().getUser();
+                Toast.makeText(MainActivity.this, "Welcome "+u.getFullname(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Result> call, Throwable t) {
+
+            }
+        });
     }
 
 }

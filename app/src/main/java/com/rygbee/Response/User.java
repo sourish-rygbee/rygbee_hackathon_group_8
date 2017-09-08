@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Sahil J on 9/9/2017.
  */
 
-class User {
+public class User {
 
     @SerializedName("username")
     private String username;

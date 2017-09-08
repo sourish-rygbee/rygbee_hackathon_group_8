@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by Sahil J on 9/9/2017.
  */
 
-class Idea {
+public class Idea {
 
     @SerializedName("is_private")
     private boolean is_private;

@@ -20,7 +20,7 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("rygbee.json")
-    Call<Result> checkLogin(@Field("user") String user);
+    Call<Result> getDetails();
 
 
 }

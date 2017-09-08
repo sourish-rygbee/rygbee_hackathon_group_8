@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Sahil J on 9/9/2017.
  */
 
-class News {
+public class News {
 
     @SerializedName("newsfeed_source")
     private String newsfeed_source;
