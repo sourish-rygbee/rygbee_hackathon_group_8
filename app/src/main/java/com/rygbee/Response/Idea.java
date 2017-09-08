@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 public class Idea {
 
     @SerializedName("is_private")
-    private boolean is_private;
+    private int is_private;
 
     @SerializedName("createdAt")
     private String createdAt;
@@ -29,11 +29,11 @@ public class Idea {
     @SerializedName("updatedAt")
     private String updatedAt;
 
-    public boolean isIs_private() {
+    public int isIs_private() {
         return is_private;
     }
 
-    public void setIs_private(boolean is_private) {
+    public void setIs_private(int is_private) {
         this.is_private = is_private;
     }
 

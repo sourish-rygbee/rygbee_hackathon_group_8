@@ -47,7 +47,7 @@ public class User {
     private String email;
 
     @SerializedName("mentor_flag")
-    private boolean mentor_flag;
+    private int mentor_flag;
 
     public String getUsername() {
         return username;
@@ -137,11 +137,11 @@ public class User {
         this.email = email;
     }
 
-    public boolean isMentor_flag() {
+    public int isMentor_flag() {
         return mentor_flag;
     }
 
-    public void setMentor_flag(boolean mentor_flag) {
+    public void setMentor_flag(int mentor_flag) {
         this.mentor_flag = mentor_flag;
     }
 
