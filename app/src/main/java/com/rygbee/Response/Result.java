@@ -15,4 +15,31 @@ public class Result {
 
     @SerializedName("ideas")
     private List<Idea> ideas;
+
+    @SerializedName("newsfeed")
+    private List<News> newsfeed;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Idea> getIdeas() {
+        return ideas;
+    }
+
+    public void setIdeas(List<Idea> ideas) {
+        this.ideas = ideas;
+    }
+
+    public List<News> getNewsfeed() {
+        return newsfeed;
+    }
+
+    public void setNewsfeed(List<News> newsfeed) {
+        this.newsfeed = newsfeed;
+    }
 }
