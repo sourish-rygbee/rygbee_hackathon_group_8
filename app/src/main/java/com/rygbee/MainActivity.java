@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+<<<<<<< HEAD
                     getSupportFragmentManager().beginTransaction().replace(R.id.frmContainer,new IdeaPadFragment()).commit();
                     return true;
                 case R.id.navigation_dashboard:
@@ -39,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_notifications:
                     //getSupportFragmentManager().beginTransaction().replace(R.id.frmContainer,new ProfileFragment()).commit();
+=======
+                    mTextMessage.setText(R.string.title_idea_pad);
+                    return true;
+                case R.id.navigation_dashboard:
+                    mTextMessage.setText(R.string.title_news_feed);
+                    return true;
+                case R.id.navigation_notifications:
+                    mTextMessage.setText(R.string.title_profile);
+>>>>>>> 74e23ab339eb4efd08e297e91bb4307b897c4c55
                     return true;
             }
             return false;

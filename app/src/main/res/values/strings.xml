@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">rygbee</string>
+<<<<<<< HEAD
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -13,6 +14,8 @@
     <string name="demo_date">FRIDAY, SEPTEMBER 8, 2017</string>
     <string name="demo_title">how to display ... for long text in textview</string>
     <string name="description">image</string>
+=======
+>>>>>>> 74e23ab339eb4efd08e297e91bb4307b897c4c55
     <string name="title_idea_pad">Idea Pad</string>
     <string name="title_news_feed">News Feed</string>
     <string name="title_profile">Profile</string>
