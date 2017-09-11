@@ -3,4 +3,33 @@
     <string name="title_idea_pad">Idea Pad</string>
     <string name="title_news_feed">News Feed</string>
     <string name="title_profile">Profile</string>
+    <string name="project_title">Put your problem or project title</string>
+
+    <string-array name="intereset_array">
+        <item>Accountability</item>
+        <item>Accountability in eco-labelling</item>
+        <item>Accounting and culture</item>
+        <item>Accounting and local community</item>
+        <item>Accounting education</item>
+        <item>Accounting for externalities</item>
+        <item>Accounting for sustainability</item>
+        <item>Accounting history</item>
+        <item>Accounting literature, analysis of</item>
+        <item>Acculturation</item>
+        <item>Action research</item>
+        <item>Activity-based costing</item>
+        <item>Ageing and organisation</item>
+        <item>Agent based modelling</item>
+        <item>Aggression</item>
+        <item>Agri-food supply chain</item>
+        <item>Agroecology accounting</item>
+        <item>Alternative dispute resolution</item>
+        <item>Analysis of corporate disclosures</item>
+        <item>Anti- and pro-social employee behaviours</item>
+        <item>Anti-corporate campaigns</item>
+        <item>Art museums	Marta Herrero</item>
+        <item>Arts</item>
+        <item>Arts and cultural management</item>
+        <item>Arts marketing</item>
+    </string-array>
 </resources>

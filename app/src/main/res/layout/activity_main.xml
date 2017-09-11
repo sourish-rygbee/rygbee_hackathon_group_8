@@ -26,5 +26,10 @@
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/colorBlack"
         app:menu="@menu/navigation" />
+    <Button
+        android:id="@+id/btnIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>

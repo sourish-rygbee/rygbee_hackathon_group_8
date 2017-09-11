@@ -1,0 +1,86 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="20dp"
+                    android:id="@+id/fn"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:hint="First Name"
+                    />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="0dp"
+                    android:paddingTop="20dp"
+                    android:id="@+id/sn"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:hint="Last Name"
+                    />
+                </LinearLayout>
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/location"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:hint="In which City/Town You are currenty live"
+                    />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/designation"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:hint="Your Designation"
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/affilation"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:hint="You are affilated with(where you study/work)"
+                />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/email"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:hint="Official mail here"
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe YourSelf"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Update"
+                        android:elevation="5dp"
+                        android:layout_gravity="center"
+                        />
+            </LinearLayout>
+    </ScrollView>
