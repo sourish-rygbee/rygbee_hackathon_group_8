@@ -1,5 +1,8 @@
 package com.rygbee.Response;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -8,7 +11,7 @@ import java.util.List;
  * Created by Sahil J on 9/9/2017.
  */
 
-public class User {
+public class User implements Parcelable {
 
     @SerializedName("username")
     private String username;
@@ -46,8 +49,14 @@ public class User {
     @SerializedName("email")
     private String email;
 
+    @SerializedName("designation")
+    private String designation;
+
     @SerializedName("mentor_flag")
     private int mentor_flag;
+
+    @SerializedName("location")
+    private String location;
 
     public String getUsername() {
         return username;
@@ -151,5 +160,31 @@ public class User {
 
     public void setDomains_of_expertise(List<String> domains_of_expertise) {
         this.domains_of_expertise = domains_of_expertise;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

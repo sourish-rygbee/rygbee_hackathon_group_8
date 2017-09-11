@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">rygbee</string>
-<<<<<<< HEAD
+    <string name="app_name">Rygbee</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -14,9 +13,57 @@
     <string name="demo_date">FRIDAY, SEPTEMBER 8, 2017</string>
     <string name="demo_title">how to display ... for long text in textview</string>
     <string name="description">image</string>
-=======
->>>>>>> 74e23ab339eb4efd08e297e91bb4307b897c4c55
-    <string name="title_idea_pad">Idea Pad</string>
-    <string name="title_news_feed">News Feed</string>
-    <string name="title_profile">Profile</string>
+    <string name="discard">Discard</string>
+    <string name="delete">Delete</string>
+
+    <string name="project_title">Put your problem or project title</string>
+    <string name="idea_hint">Provide a Title to Your Idea</string>
+    <string name="add">Add</string>
+
+    <string-array name="intereset_array">
+        <item>Accountability</item>
+        <item>Accountability in eco-labelling</item>
+        <item>Accounting and culture</item>
+        <item>Accounting and local community</item>
+        <item>Accounting education</item>
+        <item>Accounting for externalities</item>
+        <item>Accounting for sustainability</item>
+        <item>Accounting history</item>
+        <item>Accounting literature, analysis of</item>
+        <item>Acculturation</item>
+        <item>Action research</item>
+        <item>Activity-based costing</item>
+        <item>Ageing and organisation</item>
+        <item>Agent based modelling</item>
+        <item>Aggression</item>
+        <item>Agri-food supply chain</item>
+        <item>Agroecology accounting</item>
+        <item>Alternative dispute resolution</item>
+        <item>Analysis of corporate disclosures</item>
+        <item>Anti- and pro-social employee behaviours</item>
+        <item>Anti-corporate campaigns</item>
+        <item>Art museums	Marta Herrero</item>
+        <item>Arts</item>
+        <item>Arts and cultural management</item>
+        <item>Arts marketing</item>
+    </string-array>
+    <string name="affilation">Affilation : </string>
+    <string name="opentm">Open to mentoring?</string>
+    <string name="designation">Designation</string>
+    <string name="location">Location</string>
+    <string name="officialemail">Official Email : </string>
+    <string name="aboutme">About Me</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="name">Sahil Doshi</string>
+    <string name="areas_of_interest">Areas of interest</string>
+    <string name="domain_of_expertise">Domain of expertise</string>
+    <string name="search_hint">search...</string>
+    <string name="search_title">search</string>
+    <string name="bookmarks">bookmark</string>
+    <string name="news">News</string>
+    <string name="light_reads">Light Reads</string>
+    <string name="research_articles">Research Articles</string>
+    <string name="online_lectures">Online Lectures</string>
+    <string name="setting">setting</string>
 </resources>

@@ -3,10 +3,10 @@
     <color name="colorPrimary">#3aa3e3</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-<<<<<<< HEAD
-    <color name="white">#FFFFFF</color>
+    <color name="colorwhite">#FFFFFF</color>
     <color name="colorGrey">#808080</color>
-=======
+    <color name="colorlightgrey">#94cccccc</color>
     <color name="colorBlack">#ccc</color>
->>>>>>> 74e23ab339eb4efd08e297e91bb4307b897c4c55
+    <color name="blackOlive">#39393F</color>
+    <color name="orange">#FEC500</color>
 </resources>

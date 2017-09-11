@@ -1,44 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.rygbee.EditIdea"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:TagsEditText="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:id="@+id/btnBold"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_format_bold"/>
-        <Button
-            android:id="@+id/btnItalic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_format_italic"/>
-        <Button
-            android:id="@+id/btnUnderline"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_format_underlined"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBlack"
+                android:hint="@string/project_title"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textStyle="bold"
+                android:maxLength="140"
+                android:maxLines="1"/>
+            <mabbas007.tagsedittext.TagsEditText
+                android:id="@+id/tagsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorBlack"
+                android:hint="Related tags"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                TagsEditText:allowSpaceInTag="true"
+                TagsEditText:tagsCloseImageRight="@drawable/tag_close"
+                TagsEditText:tagsBackground="@drawable/square"
+                TagsEditText:tagsCloseImageLeft="@drawable/dot"
+                TagsEditText:tagsTextColor="@color/blackOlive"
+                TagsEditText:tagsTextSize="@dimen/defaultTagsTextSize"
+                TagsEditText:tagsCloseImagePadding="@dimen/defaultTagsCloseImagePadding"/>
+        </LinearLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/action_undo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_undo"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_redo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_redo"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_bold"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_format_bold"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_italic"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_format_italic"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_subscript"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_subscript"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_superscript"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_superscript"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_strikethrough"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_strikethrough"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_underline"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_format_underlined"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_heading1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_h1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_heading2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_h2"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/action_txt_color"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_format_color_text"
+                    />
+
+
+
+                <ImageButton
+                    android:id="@+id/action_indent"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_right_indent"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_outdent"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_outdent"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_align_left"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_align_left"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_align_center"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_align_justify"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_align_right"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_align_right"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_insert_bullets"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_bullet"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_insert_numbers"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_numbered_bullet"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_blockquote"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_blockquote"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_insert_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_insert_image"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_insert_link"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_insert_link"
+                    />
+
+                <ImageButton
+                    android:id="@+id/action_insert_checkbox"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@android:drawable/checkbox_on_background"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <jp.wasabeef.richeditor.RichEditor
+            android:id="@+id/editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            />
     </LinearLayout>
-    <jp.wasabeef.richeditor.RichEditor
-        android:id="@+id/richEditor"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_below="@id/linearLayout"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        >
-    </jp.wasabeef.richeditor.RichEditor>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fabAttach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_icon="@drawable/ic_wikipedia"
+            app:fab_title="Wikipedia"/>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_icon="@drawable/ic_microscope"
+            app:fab_title="Research articles" />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_icon="@drawable/ic_online_lecture"
+            app:fab_title="Online lecture"/>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_icon="@drawable/ic_paper"
+            app:fab_title="Light read"/>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>

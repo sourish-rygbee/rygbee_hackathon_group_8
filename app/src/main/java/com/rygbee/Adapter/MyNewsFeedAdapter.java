@@ -1,6 +1,10 @@
 package com.rygbee.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -21,12 +25,13 @@ import java.util.List;
 
 public class MyNewsFeedAdapter extends RecyclerView.Adapter<MyNewsFeedAdapter.MyViewHolder> implements View.OnClickListener {
 
-    private final FragmentActivity activity;
-    List<News> newsList;
+    private final Context context;
+    private List<News> newsList;
+    private String url;
 
-    public MyNewsFeedAdapter(List<News> newsList, FragmentActivity activity){
+    public MyNewsFeedAdapter(List<News> newsList, Context context){
         this.newsList = newsList;
-        this.activity=activity;
+        this.context=context;
     }
 
     @Override
@@ -56,7 +61,7 @@ public class MyNewsFeedAdapter extends RecyclerView.Adapter<MyNewsFeedAdapter.My
                     i.setType("text/plain");
                     i.putExtra(Intent.EXTRA_SUBJECT, "Rygbee");
                     i.putExtra(Intent.EXTRA_TEXT, link);
-                    activity.startActivity(Intent.createChooser(i, "choose one"));
+                    context.startActivity(Intent.createChooser(i, "choose one"));
                 } catch(Exception e) {
                     //e.toString();
                 }
@@ -77,6 +82,11 @@ public class MyNewsFeedAdapter extends RecyclerView.Adapter<MyNewsFeedAdapter.My
             }
         });
 
+        url=news.getSource_url();
+        holder.tv_news_title.setOnClickListener(this);
+        holder.tv_news_text.setOnClickListener(this);
+        holder.tv_news_time.setOnClickListener(this);
+        holder.img_news_img.setOnClickListener(this);
     }
 
     @Override
@@ -86,7 +96,10 @@ public class MyNewsFeedAdapter extends RecyclerView.Adapter<MyNewsFeedAdapter.My
 
     @Override
     public void onClick(View view) {
-
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        CustomTabsIntent customTabsIntent = builder.build();
+        builder.setToolbarColor(Color.BLUE);
+        customTabsIntent.launchUrl(context, Uri.parse(url));
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

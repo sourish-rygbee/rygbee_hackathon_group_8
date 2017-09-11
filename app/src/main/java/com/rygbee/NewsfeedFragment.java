@@ -16,6 +16,7 @@ import com.rygbee.APIs.ApiInterface;
 import com.rygbee.Adapter.MyNewsFeedAdapter;
 import com.rygbee.Response.News;
 import com.rygbee.Response.Result;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,7 @@ public class NewsfeedFragment extends Fragment {
     private RecyclerView rvNewsfeed;
     private List<News> news;
     private MyNewsFeedAdapter adapter;
+    private AVLoadingIndicatorView loder;
 
     public NewsfeedFragment() {
         // Required empty public constructor
@@ -46,12 +48,12 @@ public class NewsfeedFragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_newsfeed, container, false);
         rvNewsfeed=view.findViewById(R.id.rv_News_feed);
+        loder=view.findViewById(R.id.news_Loder);
+
+        loder.show();
         news = new ArrayList<>();
         getNews();
         rvNewsfeed.setLayoutManager(new LinearLayoutManager(getContext()));
-        /*adapter=new MyNewsFeedAdapter(news,getActivity());
-        rvNewsfeed.setAdapter(adapter);*/
-        Toast.makeText(getContext(), "Hello News", Toast.LENGTH_SHORT).show();
         return view;
     }
 
@@ -65,9 +67,10 @@ public class NewsfeedFragment extends Fragment {
                 Log.v("Data",response.body().getNewsfeed().get(0).getText());
                 news=response.body().getNewsfeed();
                 //adapter.notifyDataSetChanged();
-                adapter=new MyNewsFeedAdapter(news,getActivity());
+                loder.setVisibility(View.GONE);
+                rvNewsfeed.setVisibility(View.VISIBLE);
+                adapter=new MyNewsFeedAdapter(news,getContext());
                 rvNewsfeed.swapAdapter(adapter,false);
-                Toast.makeText(getContext(), "News Added", Toast.LENGTH_SHORT).show();
             }
 
             @Override

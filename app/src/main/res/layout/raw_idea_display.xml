@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/myrect"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/colorwhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/eighteen">
+        <TextView
+            android:id="@+id/tv_idea_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="false"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_dark_background"
+            android:text="@string/demo_title"
+            android:textSize="@dimen/tv_news_title"/>
+
+        <TextView
+            android:id="@+id/tv_idea_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrey"
+            android:text="@string/demo_date"
+            android:paddingTop="@dimen/eight"/>
+
+        <TextView
+            android:id="@+id/tv_idea_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/demo_text"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/tv_news_text"
+            android:textColor="@color/cardview_dark_background"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey"
+            android:layout_margin="@dimen/eight"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_idea_modify"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/btn_idea_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_share_black_24dp"
+                android:padding="8dp"
+                android:layout_marginEnd="@dimen/eight"
+                android:contentDescription="@string/description"/>
+            <ImageButton
+                android:id="@+id/btn_idea_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_delete_black_24dp"
+                android:padding="8dp"
+                android:contentDescription="@string/description"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
